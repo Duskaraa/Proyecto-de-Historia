@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independencia Latinoamericana | Sitio Interactivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="start-screen" id="start-screen" aria-label="Pantalla de inicio">
+        <div class="start-card">
+            <h1>Proyecto de historia</h1>
+            <h2>Equipo 4</h2>
+            <div class="start-actions">
+                <button class="start-btn" id="btn-go-gossip">Historiador Chismoso</button>
+                <button class="start-btn" id="btn-go-timeline">Línea del Tiempo</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-bg" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="bg-ring one"></div>
+        <div class="bg-ring two"></div>
+    </div>
+
+    <nav class="site-nav" id="site-nav">
+        <div class="brand">
+            <div class="brand-title">Proyecto de Historia</div>
+            <div class="brand-sub">Experiencia visual sobre una línea del tiempo de las independencias de Latinoamérica</div>
+        </div>
+        <div class="nav-actions">
+            <div class="nav-pill">1791 - 1898</div>
+            <button class="nav-home-btn" id="btn-home-timeline">Inicio</button>
+        </div>
+    </nav>
+
+    <main class="page app-view" id="timeline-view">
+        <header class="hero">
+            <h1>Línea del tiempo de la Independencia en América Latina</h1>
+            <p>
+                Recorre los procesos de emancipación país por país en un formato claro, contrastante y listo para exposición.
+                Haz clic en cada nodo para abrir la ficha histórica centrada.
+            </p>
+            <section class="stats" aria-label="Resumen de la línea temporal">
+                <article class="stat">
+                    <div class="stat-label">Países incluidos</div>
+                    <div class="stat-value" id="stat-countries">20 países</div>
+                </article>
+                <article class="stat">
+                    <div class="stat-label">Rango histórico</div>
+                    <div class="stat-value" id="stat-range">1791 - 1898</div>
+                </article>
+                <article class="stat">
+                    <div class="stat-label">Progreso de lectura</div>
+                    <div class="stat-value" id="stat-progress">0% recorrido</div>
+                </article>
+            </section>
+        </header>
+
+        <section class="timeline-section" aria-label="Línea del tiempo interactiva">
+            <div class="timeline-wrapper" id="timeline-wrapper">
+                <svg id="lasso-svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="lasso-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#facc15"></stop>
+                            <stop offset="100%" stop-color="#f97316"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path id="lasso-path" class="lasso-path"></path>
+                </svg>
+                <div class="timeline-grid" id="timeline-grid"></div>
+            </div>
+        </section>
+
+        <section class="final-question-launch" aria-label="Acceso a la pregunta final">
+            <button class="start-btn" id="btn-open-final-question">Abrir la pregunta final</button>
+        </section>
+
+        <section class="final-question-panel hidden" id="final-question-panel" aria-live="polite">
+            <h2>¿Creen que se modificó la situación social de las naciones latinoamericanas con su independencia? ¿De qué forma?</h2>
+            <p>
+                Sí, se modificó, pero de forma desigual. Las independencias rompieron el control colonial y abrieron la
+                posibilidad de crear repúblicas con nuevas leyes, ciudadanía y soberanía. Sin embargo, en muchas naciones
+                persistieron desigualdades de clase, etnia y acceso a la tierra. A largo plazo, la independencia impulsó
+                reformas políticas, el crecimiento de identidades nacionales y la ampliación gradual de derechos sociales,
+                aunque estos cambios no fueron inmediatos ni iguales para todos los sectores.
+            </p>
+            <button class="start-btn" id="btn-close-final-question">Cerrar pregunta final</button>
+        </section>
+    </main>
+
+    <section class="gossip-view app-view" id="gossip-view" aria-label="Historiador Chismoso">
+        <article class="gossip-card">
+            <h2>HISTORIADOR CHISMOSO</h2>
+            <h3>Independencia de las Trece Colonias (Norteamérica)</h3>
+
+            <div class="gossip-block">
+                <h4>¿Quién? (Sujetos)</h4>
+                <p>Colonos y líderes como George Washington, Thomas Jefferson, John Adams y Benjamin Franklin, frente al rey Jorge III y el Parlamento británico.</p>
+            </div>
+
+            <div class="gossip-block">
+                <h4>¿Por qué? (Causas)</h4>
+                <p>
+                    La independencia ocurrió porque las Trece Colonias estaban subordinadas al sistema mercantilista de Inglaterra, que las obligaba a vender materias primas y a comprar productos manufacturados británicos, limitando su comercio con otros países. Aunque recibían protección militar, no tenían representación en el Parlamento, pero sí debían obedecer leyes y pagar impuestos desde Londres. Después de la Guerra de los Siete Años (1756–1763), Inglaterra quedó endeudada y decidió que las colonias pagaran parte del costo, creando impuestos como la Ley del Azúcar, la Ley del Sello y la Ley del Té, que afectaron el comercio, los documentos legales, la prensa y la vida cotidiana. Los colonos rechazaron estas medidas porque se les cobraba sin darles voz política y adoptaron el lema “No taxation without representation”. Las protestas escalaron con boicots, disturbios y el Motín del Té en Boston, que provocó la reacción británica con las Leyes Intolerables de 1774: cierre del puerto, suspensión del autogobierno local, obligación de alojar tropas y juicios controlados por autoridades británicas. Además, el rey rechazó las peticiones del Primer Congreso Continental y declaró en rebelión a las colonias, enviando tropas. Todo esto convenció a muchos colonos de que ya no era posible seguir bajo dominio británico y que la única salida era la independencia.
+                </p>
+            </div>
+
+            <div class="gossip-block">
+                <h4>¿Para qué? (Sentido)</h4>
+                <p>
+                    La independencia se hizo para alcanzar soberanía política y autonomía real, es decir, que las colonias pudieran decidir por sí mismas cómo organizar su gobierno, sus leyes y su economía sin depender de órdenes externas. Querían crear un sistema donde la autoridad naciera de sus propios representantes, con instituciones locales que respondieran a la sociedad colonial y no a un poder lejano. Buscaban controlar los impuestos, el comercio y la producción según sus necesidades, no según los intereses de la metrópoli, y evitar restricciones como los monopolios británicos. También aspiraban a garantizar derechos y libertades, establecer límites al poder y construir una justicia propia. En el fondo, el objetivo era dejar de ser territorios subordinados para transformarse en un país libre, con capacidad de redactar constituciones, formar un gobierno común, defender sus intereses y relacionarse con otras naciones en igualdad.
+                </p>
+            </div>
+
+            <div class="gossip-grid">
+                <div class="gossip-block">
+                    <h4>¿Dónde? (Lugar)</h4>
+                    <ul>
+                        <li>Filadelfia, Pensilvania (Declaración en el Independence Hall).</li>
+                        <li>Boston, Massachusetts (Motín del Té y Leyes Intolerables).</li>
+                        <li>Lexington y Concord (primeros enfrentamientos).</li>
+                        <li>En toda la costa este de Norteamérica, en las Trece Colonias.</li>
+                    </ul>
+                </div>
+                <div class="gossip-block">
+                    <h4>¿Cuándo? (Tiempo)</h4>
+                    <ul>
+                        <li>1775: inicia la guerra.</li>
+                        <li>4 de julio de 1776: se declara la independencia.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gossip-block">
+                <h4>¿Cómo? (Forma / hechos)</h4>
+                <p>Protestas y boicots → Motín del Té → Leyes Intolerables → Congresos Continentales → formación de milicias → primeros choques en Lexington y Concord → guerra abierta contra Gran Bretaña.</p>
+            </div>
+
+            <div class="gossip-actions">
+                <button class="start-btn" id="btn-back-home">Volver al inicio</button>
+                <button class="start-btn" id="btn-go-timeline-from-gossip">Ir a Línea del Tiempo</button>
+            </div>
+        </article>
+    </section>
+
+    <footer class="site-footer">
+        Sitio diseñado para la exposicion de Historia del Equipo 4 del grupo de 3A.
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <aside class="detail-panel" id="detail-panel" aria-live="polite">
+        <button class="btn-close" id="btn-close" aria-label="Cerrar detalle">×</button>
+        <div class="panel-header">
+            <img src="" id="panel-flag" class="panel-flag" alt="">
+            <div>
+                <h2 class="panel-title" id="panel-title">País</h2>
+                <div class="panel-dates" id="panel-dates">Proceso: 1800 - 1820</div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <p class="panel-desc" id="panel-desc">Descripción histórica.</p>
+            <div class="panel-block">
+                <h3>Iniciadores del movimiento</h3>
+                <p id="panel-leaders">Líderes, grupos y sectores sociales participantes.</p>
+            </div>
+            <div class="panel-block">
+                <h3>Impacto social tras la independencia</h3>
+                <p id="panel-social">Cambios sociales y políticos posteriores al proceso.</p>
+            </div>
+            <div class="panel-block hidden" id="panel-final-question-cta-wrap">
+                <h3>Paso final</h3>
+                <p>Ya llegaste al último país. Puedes abrir la pregunta final para concluir la exposición.</p>
+                <button class="start-btn" id="btn-panel-open-final-question">Ver la pregunta final</button>
+            </div>
+            <div class="map-wrapper">
+                <img src="" id="panel-map" class="map-img" alt="">
+            </div>
+        </div>
+    </aside>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
